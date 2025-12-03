@@ -9,7 +9,6 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "chrome-remote-interface": "^0.33.3",
     "next": "16.0.5",
     "playwright": "^1.57.0",
     "react": "19.2.0",

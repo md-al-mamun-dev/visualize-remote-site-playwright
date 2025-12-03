@@ -19,9 +19,8 @@ export async function GET(req) {
   const origin = new URL(url).origin;
 
   // Rewrite ALL resource URLs to proxy them
-  html = html
-    .replace(/src="\/([^"]+)"/g, `src="/api/proxy/resource?url=${origin}/$1"`)
-    .replace(/href="\/([^"]+)"/g, `href="/api/proxy/resource?url=${origin}/$1"`);
+  html = html.replace(/src="\/([^"]+)"/g, `src="/api/proxy/resource?url=${origin}/$1"`)
+             .replace(/href="\/([^"]+)"/g, `href="/api/proxy/resource?url=${origin}/$1"`);
 
   return new NextResponse(html, {
     headers: { "Content-Type": "text/html; charset=utf-8" },

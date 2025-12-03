@@ -18,11 +18,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable}`}
-        style={{ margin: 0, padding: 0, width: '100%', height: '100vh' }}
-        suppressHydrationWarning
+    <html lang="en" >
+      <body className={`${geistSans.variable} ${geistMono.variable}`}
+        style={{ margin: 0, padding: 0, width: '100%' }}
       >
         {children}
       </body>
