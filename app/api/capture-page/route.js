@@ -8,9 +8,8 @@ export async function GET(request) {
   const stream = searchParams.get('stream') === 'true';
 
   // If streaming is requested, return SSE stream
-  if (stream) {
-    return handleStreamingCapture(request);
-  }
+  if (stream) return handleStreamingCapture(request);
+  
 
   // Original non-streaming implementation
   const targetUrl = 'http://localhost:3001';
